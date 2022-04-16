@@ -7,6 +7,7 @@ public class HomeWork2 {
         positiveOrNegativeNumber();
         int d = 22;
         positiveOrNegativeNumber2(d);
+        linePrinting();
     }
 
     public static boolean summLimits2(int a, int b) {
@@ -27,6 +28,13 @@ public class HomeWork2 {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public static void linePrinting() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Число 15");
+
         }
     }
 
