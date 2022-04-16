@@ -5,7 +5,8 @@ public class HomeWork2 {
         int a = 5, b = 7;
         summLimits2(a, b);
         positiveOrNegativeNumber();
-        int d = 20;
+        int d = 22;
+        positiveOrNegativeNumber2(d);
     }
 
     public static boolean summLimits2(int a, int b) {
@@ -18,6 +19,14 @@ public class HomeWork2 {
             System.out.println("Число чётное");
         } else {
             System.out.println("Число нечётное");
+        }
+    }
+
+    public static boolean positiveOrNegativeNumber2(int d) {
+        if (d % 2 != 0) {
+            return true;
+        } else {
+            return false;
         }
     }
 
