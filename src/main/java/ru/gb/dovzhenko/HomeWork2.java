@@ -2,15 +2,23 @@ package ru.gb.dovzhenko;
 
 public class HomeWork2 {
     public static void main(String[] args) {
-        summLimits();
+        int a = 5, b = 7;
+        summLimits2(a, b);
+        positiveOrNegativeNumber();
+        int d = 20;
     }
 
-    public static void summLimits() {
-        int a = 5, b = 7;
-        if (a + b >= 10 && a + b <= 20) {
-            System.out.println("true");
+    public static boolean summLimits2(int a, int b) {
+        return (a + b >= 10 && a + b <= 20);
+    }
+
+    public static void positiveOrNegativeNumber() {
+        int a = 0;
+        if (a % 2 == 0) {
+            System.out.println("Число чётное");
         } else {
-            System.out.println("false");
+            System.out.println("Число нечётное");
         }
     }
+
 }
