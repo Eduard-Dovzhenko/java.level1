@@ -8,7 +8,7 @@ public class HomeWork2 {
         int d = 22;
         positiveOrNegativeNumber2(d);
         linePrinting();
-        int e = 1990;
+        int e = 1900;
         leapYear(e);
     }
 
@@ -41,10 +41,9 @@ public class HomeWork2 {
     }
 
     public static boolean leapYear(int e) {
-        if (e % 4 == 0) {
+        if (e % 100 == 0 && e % 400 == 0) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
