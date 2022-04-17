@@ -8,6 +8,8 @@ public class HomeWork2 {
         int d = 22;
         positiveOrNegativeNumber2(d);
         linePrinting();
+        int e = 1990;
+        leapYear(e);
     }
 
     public static boolean summLimits2(int a, int b) {
@@ -35,6 +37,15 @@ public class HomeWork2 {
         for (int i = 0; i < 10; i++) {
             System.out.println("Число 15");
 
+        }
+    }
+
+    public static boolean leapYear(int e) {
+        if (e % 4 == 0) {
+            return true;
+        }
+        else {
+            return false;
         }
     }
 
