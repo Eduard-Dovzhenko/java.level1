@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class HomeWork3 {
     public static void main(String[] args) {
         invertArray();
+        fillArray();
     }
 
     public static void invertArray() {
@@ -15,6 +16,14 @@ public class HomeWork3 {
             }
         }
         System.out.println(Arrays.toString(arr));
+    }
+
+    public static void fillArray() {
+        int[] arr1 = new int[100];
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = i + 1;
+        }
+        System.out.println(Arrays.toString(arr1));
     }
 }
 
