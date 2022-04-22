@@ -5,6 +5,7 @@ public class HomeWork3 {
         invertArray();
         fillArray();
         changeArray();
+        fillDiagonal();
     }
 
     public static void invertArray() {
@@ -37,6 +38,20 @@ public class HomeWork3 {
             }
         }
         System.out.println(Arrays.toString(arr2));
+    }
+
+    public static void fillDiagonal() {
+        int[][] arr3 = new int[9][9];
+        for (int i = 0; i < arr3.length; i++) {
+            for (int j = 0; j < arr3.length; j++) {
+                if (i == j || i == arr3.length - j - 1) {
+                    arr3[i][j] = 1;
+                } else {
+                    arr3[i][j] = 0;
+                }
+            }
+            System.out.println(Arrays.toString(arr3[i]));
+        }
     }
 }
 
