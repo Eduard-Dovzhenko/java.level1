@@ -4,6 +4,7 @@ public class HomeWork3 {
     public static void main(String[] args) {
         invertArray();
         fillArray();
+        changeArray();
     }
 
     public static void invertArray() {
@@ -24,6 +25,18 @@ public class HomeWork3 {
             arr1[i] = i + 1;
         }
         System.out.println(Arrays.toString(arr1));
+    }
+
+    public static void changeArray() {
+        int[] arr2 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < arr2.length; i++) {
+            if (arr2[i] < 6) {
+                arr2[i] = arr2[i] * 2;
+            } else {
+                arr2[i] = arr2[i];
+            }
+        }
+        System.out.println(Arrays.toString(arr2));
     }
 }
 
