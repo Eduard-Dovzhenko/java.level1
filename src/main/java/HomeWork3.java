@@ -6,6 +6,9 @@ public class HomeWork3 {
         fillArray();
         changeArray();
         fillDiagonal();
+        int len = 5;
+        int initialValue = 5;
+        returningAnArray(len, initialValue);
     }
 
     public static void invertArray() {
@@ -52,6 +55,15 @@ public class HomeWork3 {
             }
             System.out.println(Arrays.toString(arr3[i]));
         }
+    }
+
+    public static int[] returningAnArray(int len, int initialValue) {
+        int[] arr4 = new int[len];
+        for (int i = 0; i < arr4.length; i++) {
+            arr4[i] = initialValue;
+        }
+        System.out.println(Arrays.toString(arr4));
+        return arr4;
     }
 }
 
