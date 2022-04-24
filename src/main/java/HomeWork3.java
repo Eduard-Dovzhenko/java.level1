@@ -9,6 +9,7 @@ public class HomeWork3 {
         int len = 5;
         int initialValue = 5;
         returningAnArray(len, initialValue);
+        minAndMaxNumber();
     }
 
     public static void invertArray() {
@@ -64,6 +65,20 @@ public class HomeWork3 {
         }
         System.out.println(Arrays.toString(arr4));
         return arr4;
+    }
+
+    public static void minAndMaxNumber() {
+        int[] arr5 = {2, 15, 3, 9, 11, 7, 8, 14, 20, 1};
+        int max = arr5[0];
+        int min = arr5[0];
+        for (int i = 0; i < arr5.length; i++) {
+            if (arr5[i] > max) {
+                max = arr5[i];
+            } else if (arr5[i] < min) {
+                min = arr5[i];
+            }
+        }
+        System.out.println("Максимальное число: " + max + " , " + "Минимальное число: " + min);
     }
 }
 
