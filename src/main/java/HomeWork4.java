@@ -40,22 +40,30 @@ public class HomeWork4 {
     }
 
     public static boolean checkWin(char symb) {
-        if (map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return
-                true;
-        if (map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return
-                true;
-        if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return
-                true;
-        if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return
-                true;
-        if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return
-                true;
-        if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return
-                true;
-        if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return
-                true;
-        if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return
-                true;
+        for (int i = 0; i < map.length; i++) {
+            if ((map[i][0] == symb && map[i][1] == symb && map[i][2] == symb) || (map[0][i] == symb && map[1][i] == symb && map[2][i] == symb))
+                return true;
+            if ((map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) || (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb))
+                return true;
+
+            //  if (map[0][0] == symb && map[0][1] == symb && map[0][2] == symb)
+            //      return true;
+            //  if (map[1][0] == symb && map[1][1] == symb && map[1][2] == symb)
+            //      return true;
+            //  if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb)
+            //      return true;
+            //  if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb)
+            //      return true;
+            //  if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb)
+            //      return true;
+            //  if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb)
+            //      return true;
+            //  if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb)
+            //      return true;
+            //  if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb)
+            //      return true;
+            //  return false;
+        }
         return false;
     }
 
