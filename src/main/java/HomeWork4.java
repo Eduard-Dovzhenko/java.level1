@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HomeWork4 {
-    public static int SIZE = 3;
+    public static int SIZE = 5;
     public static int DOTS_TO_WIN = 3;
     public static final char DOT_EMPTY = '•';
     public static final char DOT_X = 'X';
@@ -41,9 +41,11 @@ public class HomeWork4 {
 
     public static boolean checkWin(char symb) {
         for (int i = 0; i < map.length; i++) {
-            if ((map[i][0] == symb && map[i][1] == symb && map[i][2] == symb) || (map[0][i] == symb && map[1][i] == symb && map[2][i] == symb))
+            if ((map[i][0] == symb && map[i][1] == symb && map[i][2] == symb && map[i][3] == symb && map[i][4] == symb)
+                    || (map[0][i] == symb && map[1][i] == symb && map[2][i] == symb && map[3][i] == symb && map[4][i] == symb))
                 return true;
-            if ((map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) || (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb))
+            if ((map[0][0] == symb && map[1][1] == symb && map[2][2] == symb && map[3][3] == symb && map[4][4] == symb)
+                    || (map[4][0] == symb && map[3][1] == symb && map[2][2] == symb && map[1][3] == symb && map[0][4] == symb))
                 return true;
 
             //  if (map[0][0] == symb && map[0][1] == symb && map[0][2] == symb)
