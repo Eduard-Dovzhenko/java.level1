@@ -20,11 +20,11 @@ public class Worker {
                 33000.47, 36);
         workerArray[4] = new Employee("Андронов Арсений Александрович", "Инженер", "f@f.com", 892835366,
                 41550.63, 38);
-        for (int i = 0; i < workerArray.length; i++) {
-            if (workerArray[i].getAge() > 40) {
-                String info1 = "ФИО: " + workerArray[i].getFullName() + "\nДолжность: " + workerArray[i].getPosition() + "\nПочта: "
-                        + workerArray[i].getEmail() + "\nНомер телефона: " + workerArray[i].getPhoneNumber() + "\nЗарплата: " +
-                        workerArray[i].getTheSalary() + "\nВозраст: " + workerArray[i].getAge();
+        for (Employee worker1 : workerArray) {
+            if (worker1.getAge() > 40) {
+                String info1 = "ФИО: " + worker1.getFullName() + "\nДолжность: " + worker1.getPosition() + "\nПочта: "
+                        + worker1.getEmail() + "\nНомер телефона: " + worker1.getPhoneNumber() + "\nЗарплата: " +
+                        worker1.getTheSalary() + "\nВозраст: " + worker1.getAge();
                 System.out.println(info1);
                 System.out.println();
             }
