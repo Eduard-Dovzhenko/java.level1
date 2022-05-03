@@ -5,19 +5,19 @@ public class Cat extends Animals {
 
     @Override
     public void setRun(int run) {
+        super.setRun(run);
         if (run <= 200) {
-            super.setRun(run);
-        }else {
-            System.out.println("Кот столько не пробежит!!!");
+            System.out.println("Мурзик пробежал: " + run + " метров.");
+        } else {
+            System.out.println("Мурзик столько не пробежит!!!");
         }
     }
 
     @Override
     public void setSwimming(int swimming) {
-            if (swimming <= 0) {
-            super.setSwimming(swimming);
-        } else {
-            System.out.println("Кот столько не проплывёт!!!");
+        super.setSwimming(swimming);
+        if (swimming >= 0) {
+            System.out.println("Мурзик плавать не умеет!");
         }
     }
 }
