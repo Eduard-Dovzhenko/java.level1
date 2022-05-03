@@ -57,6 +57,16 @@ public class Employee {
             this.age = age;
         }
     }
+     public String  getInfo() {
+        if (getAge() > 40) {
+                 String info = "ФИО: " + getFullName() + "\nДолжность: " + getPosition() + "\nПочта: "
+                         + getEmail() + "\nНомер телефона: " + getPhoneNumber() + "\nЗарплата: " +
+                         getTheSalary() + "\nВозраст: " + getAge();
+                 System.out.println();
+                 return info;
+             }
+        return "";
+     }
 
     public Employee(String fullName, String position, String email, int phoneNumber, double theSalary, int age) {
         this.fullName = fullName;
@@ -65,5 +75,6 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.theSalary = theSalary;
         setAge(age);
+        System.out.println(getInfo());
     }
 }
