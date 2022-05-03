@@ -7,6 +7,7 @@ public class Animals {
         this.name = name;
         this.run = run;
         this.swimming = swimming;
+        print();
     }
 
     public String getName() {
@@ -31,5 +32,10 @@ public class Animals {
 
     public void setSwimming(int swimming) {
         this.swimming = swimming;
+    }
+
+    public void print() {
+        System.out.println("Имя: " + name + "\nБег: " + run + "\nПлавание: " + swimming);
+        System.out.println();
     }
 }
