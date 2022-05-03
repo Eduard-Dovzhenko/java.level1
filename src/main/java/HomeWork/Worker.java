@@ -4,6 +4,10 @@ public class Worker {
     public static void main(String[] args) {
         Employee worker = new Employee("Иванов Иван Иванович", "Начальник отдела", "a@a.com", 891255545,
                 70056.50, 56);
+        String info = "ФИО: " + worker.getFullName() + "\nДолжность: " + worker.getPosition() + "\nПочта: " + worker.getEmail() + "\nНомер телефона: "
+                + worker.getPhoneNumber() + "\nЗарплата: " + worker.getTheSalary() + "\nВозраст: " + worker.getAge();
+        System.out.println(info);
+        System.out.println();
 
 
         Employee[] workerArray = new Employee[5];
@@ -17,6 +21,14 @@ public class Worker {
                 33000.47, 36);
         workerArray[4] = new Employee("Андронов Арсений Александрович", "Инженер", "f@f.com", 892835366,
                 41550.63, 38);
-
+        for (int i = 0; i < workerArray.length; i++) {
+            if (workerArray[i].getAge() > 40) {
+                String info1 = "ФИО: " + workerArray[i].getFullName() + "\nДолжность: " + workerArray[i].getPosition() + "\nПочта: "
+                        + workerArray[i].getEmail() + "\nНомер телефона: " + workerArray[i].getPhoneNumber() + "\nЗарплата: " +
+                        workerArray[i].getTheSalary() + "\nВозраст: " + workerArray[i].getAge();
+                System.out.println(info1);
+                System.out.println();
+            }
+        }
     }
 }
