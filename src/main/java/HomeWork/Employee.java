@@ -58,6 +58,11 @@ public class Employee {
         }
     }
 
+    public void print() {
+        System.out.println("ФИО: " + getFullName() + "\nДолжность: " + getPosition() + "\nПочта: " + getEmail() + "\nНомер телефона: "
+                + getPhoneNumber() + "\nЗарплата: " + getTheSalary() + "\nВозраст: " + getAge());
+        System.out.println();
+    }
 
     public Employee(String fullName, String position, String email, int phoneNumber, double theSalary, int age) {
         this.fullName = fullName;
@@ -66,6 +71,5 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.theSalary = theSalary;
         setAge(age);
-
     }
 }
