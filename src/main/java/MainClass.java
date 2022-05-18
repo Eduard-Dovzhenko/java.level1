@@ -8,16 +8,16 @@ public class MainClass {
         cat[4] = new Cat("Murzik", 19);
         Plate plate = new Plate(100);
         plate.info();
-        for (int i = 0; i < cat.length; i++) {
-            cat[i].eat(plate);
+        for (Cat value : cat) {
+            value.eat(plate);
         }
-        plate.addFood(50);
+        plate.addFood();
         plate.info();
-        for (int i = 0; i < cat.length; i++) {
-            cat[i].eat(plate);
+        for (Cat value : cat) {
+            value.eat(plate);
         }
-        for (int i = 0; i < cat.length; i++) {
-            cat[i].eat(plate);
+        for (Cat value : cat) {
+            value.eat(plate);
         }
         plate.info();
     }
