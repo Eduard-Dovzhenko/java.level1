@@ -19,5 +19,9 @@ public class Plate {
     public void info() {
         System.out.println("В миске: " + food + " грамм");
     }
+    void addFood(int food) {
+        this.food += food;
+        System.out.println("Добавил в миску корм");
+    }
 
 }
