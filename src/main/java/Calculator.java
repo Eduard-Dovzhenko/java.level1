@@ -14,17 +14,17 @@ public class Calculator extends JFrame {
         setBounds(300, 300, 400, 400);
         setLayout(new BorderLayout());
 
-        final JLabel display = new JLabel("0");
+        JLabel display = new JLabel("0");
         display.setHorizontalAlignment(SwingConstants.RIGHT);
         display.setFont(new Font("Times New Roman", Font.BOLD, 32));
         add(display, BorderLayout.NORTH);
 
-        final ActionListener numberListener = new ActionListener() {
+        ActionListener numberListener = new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                final JButton button = (JButton) e.getSource();
-                final String text = button.getText();
+                JButton button = (JButton) e.getSource();
+                String text = button.getText();
                 String displayText = display.getText();
 
                 if (".".equals(text) && displayText.contains(".")) {
@@ -38,12 +38,12 @@ public class Calculator extends JFrame {
             }
         };
 
-        final ActionListener buttonListener = new ActionListener() {
+        ActionListener buttonListener = new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                final JButton source = (JButton) e.getSource();
-                final String action = source.getText();
+                JButton source = (JButton) e.getSource();
+                String action = source.getText();
                 Double rightOperand = Double.parseDouble(display.getText());
 
                 if ("=".equals(action)) {
@@ -61,6 +61,9 @@ public class Calculator extends JFrame {
                             case "/":
                                 display.setText(String.valueOf(leftOperand / rightOperand));
                                 break;
+                            case "C":
+                                display.setText("0");
+                                break;
                         }
                         leftOperand = Double.parseDouble(display.getText());
                         operation = null;
@@ -72,29 +75,33 @@ public class Calculator extends JFrame {
                 display.setText("0");
             }
         };
-        final JPanel numberPanel = new JPanel();
-        final GridLayout numberLayout = new GridLayout(4, 4, 10, 10);
+        JPanel numberPanel = new JPanel();
+        numberPanel.setFont(new Font("Comic Sans MS", Font.BOLD, 32));
+        GridLayout numberLayout = new GridLayout(4, 4, 10, 10);
         numberPanel.setLayout(numberLayout);
 
         for (int i = 0; i < 10; i++) {
-            final JButton button = new JButton(String.valueOf(i));
+            JButton button = new JButton(String.valueOf(i));
             button.addActionListener(numberListener);
             numberPanel.add(button);
         }
 
-        final JButton pointButton = new JButton(".");
+        JButton pointButton = new JButton(".");
+        pointButton.setFont(new Font("Comic Sans MS", Font.BOLD, 32));
         pointButton.addActionListener(numberListener);
-        final JButton negativeButton = new JButton("+/-");
+        JButton negativeButton = new JButton("+/-");
+        negativeButton.setFont(new Font("Comic Sans MS", Font.BOLD, 32));
 
         numberPanel.add(pointButton);
         numberPanel.add(negativeButton);
 
-        final JPanel buttonPanel = new JPanel();
-        final GridLayout buttonLayout = new GridLayout(2, 3, 10, 10);
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setFont(new Font("Comic Sans MS", Font.BOLD, 32));
+        GridLayout buttonLayout = new GridLayout(2, 3, 10, 10);
         buttonPanel.setLayout(buttonLayout);
 
         for (char c : "C+-*/=".toCharArray()) {
-            final JButton button = new JButton(String.valueOf(c));
+            JButton button = new JButton(String.valueOf(c));
             button.addActionListener(buttonListener);
             buttonPanel.add(button);
         }
