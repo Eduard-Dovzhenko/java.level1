@@ -1,6 +1,14 @@
 public class Robot implements Skills {
     private String name;
 
+    public Robot(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public void run(int length) {
         run(5000);

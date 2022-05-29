@@ -1,5 +1,5 @@
 public interface Skills {
-    void run(int length);
+    void run(int run);
 
-    void jump(int length);
+    void jump(int jump);
 }

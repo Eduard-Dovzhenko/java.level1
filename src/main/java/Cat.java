@@ -1,6 +1,14 @@
 public class Cat implements Skills {
     private String name;
 
+    public Cat(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public void run(int length) {
         run(500);

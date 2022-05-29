@@ -1,5 +1,14 @@
 public class Human implements Skills {
+
     private String name;
+
+    public Human(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     @Override
     public void run(int length) {
