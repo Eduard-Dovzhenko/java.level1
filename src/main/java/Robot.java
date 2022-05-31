@@ -1,31 +1,39 @@
-public class Robot implements Skills {
+public class Robot implements Participant {
     private String name;
+    private int runMax;
+    private int jumpMax;
+    private boolean play;
 
-    public Robot(String name) {
+
+    public Robot(String name, int runMax, int jumpMax) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void run(int length) {
-        run(5000);
-        if (length <= 5000) {
-            System.out.println("Робот пробежал: " + length + " метров.");
-        } else {
-            System.out.println("Робот столько не пробежит!!!");
-        }
+        this.runMax = runMax;
+        this.jumpMax = jumpMax;
+        this.play = true;
     }
 
     @Override
-    public void jump(int length) {
-        jump(1);
-        if (length <= 1) {
-            System.out.println("Робот прыгнул на: " + length + " метров.");
-        } else {
-            System.out.println("Робот не может прыгнуть на такую высоту!!!");
-        }
+    public boolean isPlay() {
+        return play;
+    }
+
+    @Override
+    public int getRunMax() {
+        return runMax;
+    }
+
+    @Override
+    public int getJumpMax() {
+        return jumpMax;
+    }
+
+    @Override
+    public void setPlay(boolean play) {
+        this.play = play;
+    }
+
+    @Override
+    public String toString() {
+        return "Робот по имени " + name;
     }
 }

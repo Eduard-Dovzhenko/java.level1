@@ -1,28 +1,21 @@
-public class Treadmill extends Obstacles {
-    private int dist;
+public class Treadmill implements Obstacle {
+    private int length;
 
-    public Treadmill(int dist) {
-        this.dist = dist;
-    }
-
-    public int getDist() {
-        return dist;
-    }
-
-    public void setDist(int dist) {
-        this.dist = dist;
-    }
-
-    public boolean isOvercome(int distanceOfRun) {
-        return distanceOfRun > dist;
+    public Treadmill(int length) {
+        this.length = length;
     }
 
     @Override
-    public void info(int distanceOfRun) {
-        if (distanceOfRun > dist) {
-            System.out.println("Пробежал дистанцию.");
-        } else {
-            System.out.println("Не смог пробежать дистанцию.");
-        }
+    public void overCome(Participant participant) {
+        participant.run(this);
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    @Override
+    public String toString() {
+        return "Беговая дорожка длиной " + length + " метров.";
     }
 }

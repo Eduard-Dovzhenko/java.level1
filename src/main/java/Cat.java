@@ -1,31 +1,39 @@
-public class Cat implements Skills {
+public class Cat implements Participant {
     private String name;
+    private int runMax;
+    private int jumpMax;
+    private boolean play;
 
-    public Cat(String name) {
+
+    public Cat(String name, int runMax, int jumpMax) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void run(int length) {
-        run(500);
-        if (length <= 500) {
-            System.out.println("Кот пробежал: " + length + " метров.");
-        } else {
-            System.out.println("Кот столько не пробежит!!!");
-        }
+        this.runMax = runMax;
+        this.jumpMax = jumpMax;
+        this.play = true;
     }
 
     @Override
-    public void jump(int length) {
-        jump(5);
-        if (length <= 5) {
-            System.out.println("Кот прыгнул на: " + length + " метров.");
-        } else {
-            System.out.println("Кот не может прыгнуть на такую высоту!!!");
-        }
+    public boolean isPlay() {
+        return play;
+    }
+
+    @Override
+    public int getRunMax() {
+        return runMax;
+    }
+
+    @Override
+    public int getJumpMax() {
+        return jumpMax;
+    }
+
+    @Override
+    public void setPlay(boolean play) {
+        this.play = play;
+    }
+
+    @Override
+    public String toString() {
+        return "Кот по имени " + name;
     }
 }

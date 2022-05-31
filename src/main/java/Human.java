@@ -1,34 +1,39 @@
-public class Human implements Skills {
-
+public class Human implements Participant {
     private String name;
+    private int runMax;
+    private int jumpMax;
+    private boolean play;
 
-    public Human(String name) {
+
+    public Human(String name, int runMax, int jumpMax) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void run(int length) {
-        run(1000);
-        if (length <= 1000) {
-            System.out.println("Человек пробежал: " + length + " метров.");
-        } else {
-            System.out.println("Человек столько не пробежит!!!");
-        }
-
+        this.runMax = runMax;
+        this.jumpMax = jumpMax;
+        this.play = true;
     }
 
     @Override
-    public void jump(int length) {
-        jump(2);
-        if (length <= 2) {
-            System.out.println("Человек прыгнул на: " + length + " метров.");
-        } else {
-            System.out.println("Человек не может прыгнуть на такую высоту!!!");
-        }
+    public boolean isPlay() {
+        return play;
     }
 
+    @Override
+    public int getRunMax() {
+        return runMax;
+    }
+
+    @Override
+    public int getJumpMax() {
+        return jumpMax;
+    }
+
+    @Override
+    public void setPlay(boolean play) {
+        this.play = play;
+    }
+
+    @Override
+    public String toString() {
+        return "Человек по имени " + name;
+    }
 }

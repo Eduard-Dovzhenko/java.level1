@@ -1,28 +1,21 @@
-public class Wall extends Obstacles {
+public class Wall implements Obstacle {
     private int height;
 
     public Wall(int height) {
         this.height = height;
     }
 
+    @Override
+    public void overCome(Participant participant) {
+        participant.jump(this);
+    }
+
     public int getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public boolean isOvercome(int jumpHeight) {
-        return jumpHeight > height;
-    }
-
     @Override
-    public void info(int jumpHeight) {
-        if (jumpHeight > height) {
-            System.out.println("Преодолел препятствие.");
-        } else {
-            System.out.println("Не смог преодолеть препятствие.");
-        }
+    public String toString() {
+        return "Стена высотой " + height + " метров.";
     }
 }
